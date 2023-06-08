@@ -1,0 +1,106 @@
+ string nome; 
+        string sobrenome;
+        string endereco;
+        string bairro;
+        string cidade;
+        string estado;
+        int viagens;
+        int viagens2;
+        string enter;
+        string cupom= "Conradito10";
+        string resposta;
+        
+        
+        Console.WriteLine("Bem- vindo(a) ao Viagens");
+        Console.WriteLine("Qual o seu nome?");
+        nome=Console.ReadLine();
+        
+        Console.WriteLine("Qual o seu sobrenome?");
+        sobrenome=Console.ReadLine();
+        
+        Console.WriteLine($"Ola, Sr(a). {nome} {sobrenome}, vamos continuar seu cadastro...");
+        
+        Console.WriteLine("Agora precisamos do seu endereco, digite por favor");
+        endereco=Console.ReadLine();
+        
+        Console.WriteLine("Digite por favor o seu bairro:");
+        bairro=Console.ReadLine();
+        Console.WriteLine("\n");
+        Console.WriteLine("Digite por favor a sua cidade:");
+        cidade=Console.ReadLine();
+        Console.WriteLine("\n");
+        Console.WriteLine("Digite o seu estado:");
+        estado=Console.ReadLine();
+        Console.WriteLine("\n");
+        
+        Console.WriteLine($"O Sr(a). {sobrenome}, mora na cidade de {cidade}-{estado}, no endereco {endereco}, localizado no bairro {bairro}.");
+        
+        Console.WriteLine("Quantas viagens voce fez ano passado?");
+        viagens=int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Quantas viagens pretende fazer esse ano?");
+        viagens2=int.Parse(Console.ReadLine());
+        
+        Console.WriteLine($"Voce fez ao todo:{viagens + viagens2} viagens");
+        
+        
+        if(viagens+viagens2 <10)
+        {
+        
+        Console.WriteLine($"Para completar 10 viagens faltam {10-(viagens+viagens2)}");
+        }
+        
+        
+        else
+        {
+        Console.WriteLine("Voce ja fez mais de 10 viagens!");  
+        }
+        
+         Console.WriteLine($"Para saber sua media de viagens aperte a tecla ENTER");
+          enter=Console.ReadLine();
+        
+        if(enter==enter)
+        {
+          Console.WriteLine($"Sua media de viagens e: {viagens+viagens2/(2)}");
+    
+        
+        
+       Console.WriteLine("Para saber os meses de intervalo entre as suas viagens aperte ENTER");
+       enter=Console.ReadLine();
+        }
+        
+       if(enter==enter)
+       {
+        Console.WriteLine($"Meses de intervalo entre as viagens deste ano: {(12)/viagens2}");
+         
+         Console.WriteLine($"Obrigado {nome} {sobrenome}, o seu cadastro foi realizado com sucesso");
+       }
+    
+        
+        Console.WriteLine("Digite o seu cupom de desconto");
+        cupom=Console.ReadLine();
+        
+        if(cupom=="Conradito10")
+        {
+            Console.WriteLine("Parabens, voce recebeu 10% de desconto na sua proxima viagem");
+        }
+        else
+        {
+            Console.WriteLine("Este cupom nao existe");
+        }
+        
+        Console.WriteLine("Voce gostaria de receber promocoes no seu e-mail?");
+        resposta=Console.ReadLine();
+        
+        if(resposta== "sim")
+        {
+            Console.WriteLine($"Obrigado por se registrar {nome}, voce recebera novos e-mails em breve.");
+        }
+        else
+        {
+            Console.WriteLine("Ok voce nao recebera e-mails de promocoes");
+        }
+        
+        Console.WriteLine("Obrigado, e volte sempre"); 
+        
+        Console.ReadKey();
